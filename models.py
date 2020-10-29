@@ -16,7 +16,7 @@ class PyObjectId(ObjectId):
     @classmethod
     def validate(cls, v):
         if ( not ObjectId.is_valid(v) ):
-            raise ValueError('Invalid Object id')
+            raise ValueError('Invalid Object id '+str(v))
         return ObjectId(v)
 
     @classmethod
@@ -26,6 +26,7 @@ class PyObjectId(ObjectId):
 #schema
 class Student(BaseModel):
     id: Optional[PyObjectId] = Field(alias='_id')
+    student_id: str
     name: str
     department: str
 

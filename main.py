@@ -1,14 +1,16 @@
 from fastapi import FastAPI
 from models import Student, db
+from bson import ObjectId
 
 import json
 import csv
 
 app = FastAPI()
 
+
 #convert csv to json
 csvfilePath = 'sample.csv'
-jsonfilePath= 'output.json'
+# jsonfilePath= 'output.json'
 
 data = {}
 
@@ -18,13 +20,40 @@ with open(csvfilePath) as csvf:
         id = rows['id']
         data[id] = rows
 
-with open(jsonfilePath, 'w') as jsonf:
-    jsonf.write(json.dumps(data, indent=0))
+res_ids = []
+for doc in data.values():
+    print(doc)
+    student = {
+        "_id": ObjectId(),
+        "student_id": doc['id'],
+        "name": doc['name'],
+        "department": doc['department']
+    }
+    res = db.students.insert_one(student)
+    res_ids.append(res.inserted_id)
+
+# with open(jsonfilePath, 'w') as jsonf:
+#     jsonf.write(json.dumps(data, indent=4))
+
+# json_data = json.dumps(data) 
+# print(json_data)
+
 #json file created
+
+
+
+
+
 
 @app.get("/")
 def read_root():
     return {'message': 'hello world'}
+
+@app.post('/add-students')
+async def add_students():
+
+    
+    return res_ids
 
 @app.get('/students')
 async def get_students():
@@ -39,7 +68,8 @@ async def get_students():
 async def add_student(stud: Student):
     if hasattr(stud, 'id'):
         delattr(stud, 'id')
-    ret = db.students.insert_one(stud.dict(by_alais='True'))
+    setattr(stud, 'id', ObjectId())
+    ret = db.students.insert_one(stud.dict(by_alias='True'))
     stud.id = ret.inserted_id
     return {
         'student': stud
