@@ -12,25 +12,25 @@ app = FastAPI()
 csvfilePath = 'sample.csv'
 # jsonfilePath= 'output.json'
 
-data = {}
+# data = {}
 
-with open(csvfilePath) as csvf:
-    csvReader = csv.DictReader(csvf)
-    for rows in csvReader:
-        id = rows['id']
-        data[id] = rows
+# with open(csvfilePath) as csvf:
+#     csvReader = csv.DictReader(csvf)
+#     for rows in csvReader:
+#         id = rows['id']
+#         data[id] = rows
 
-res_ids = []
-for doc in data.values():
-    print(doc)
-    student = {
-        "_id": ObjectId(),
-        "student_id": doc['id'],
-        "name": doc['name'],
-        "department": doc['department']
-    }
-    res = db.students.insert_one(student)
-    res_ids.append(res.inserted_id)
+# res_ids = []
+# for doc in data.values():
+#     print(doc)
+#     student = {
+#         "_id": ObjectId(),
+#         "student_id": doc['id'],
+#         "name": doc['name'],
+#         "department": doc['department']
+#     }
+#     res = db.students.insert_one(student)
+#     res_ids.append(res.inserted_id)
 
 # with open(jsonfilePath, 'w') as jsonf:
 #     jsonf.write(json.dumps(data, indent=4))
@@ -41,19 +41,16 @@ for doc in data.values():
 #json file created
 
 
-
-
-
-
 @app.get("/")
 def read_root():
     return {'message': 'hello world'}
 
 @app.post('/add-students')
 async def add_students():
+    return {'msg': "post route"}
 
-    
-    return res_ids
+
+# curl -X POST http://localhost:8000/add-students -H 'Content-Type: text/csv' -d @sample.csv
 
 @app.get('/students')
 async def get_students():

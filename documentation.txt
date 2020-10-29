@@ -1,0 +1,55 @@
+28 oct
+-------
+topic: fastapi
+source:  https://fastapi.tiangolo.com/
+insights:
+    installation, importing
+    using uvicorn server to run fastapi app
+    simple get route, accessing params value
+    simple basemodel and put request
+
+topic: flask
+source: https://flask.palletsprojects.com/en/1.1.x/quickstart/ 
+insights:
+    installation and importing flask
+    setting FLASK_APP=filename.py in cmd line
+    and 'run flask' to run the flask application
+    unique url - without trailing slash
+    routing in flask
+    jinja template(overview)
+    url_for() - get url for function
+    render_template() - to render file
+    redirect() - redirecting back in routing
+
+
+29 oct
+--------
+
+topic: access csv file in fastapi
+source: https://www.geeksforgeeks.org/convert-csv-to-json-using-python/
+
+other insights: 
+    connect to mongodb using pymongo
+    get and put data to database 
+source: many websites that hold relevant information
+
+
+topic: cURL
+source: https://www.youtube.com/watch?v=7XUibDYw4mc
+insights:
+    get request using cURL (with and without header information)
+    get request information - copy to file, download
+    
+
+
+steps in assignment:
+-------------------
+csv to json -- okay
+connect to mongodb --okay
+GET data from mongodb --okay
+
+PUT data to mongodb 
+    - deal with _id --okay
+    - when called, add data
+format json object - to insert into db --okay
+
