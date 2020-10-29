@@ -1,0 +1,6 @@
+csv to json -- okay
+connect to mongodb --okay
+GET data from mongodb --okay
+
+PUT data to mongodb 
+    - deal with _id 

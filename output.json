@@ -1,52 +1,52 @@
 {
 "1": {
-"ID": "1",
-"Name": "Adams",
-"Department": "CSE"
+"id": "1",
+"name": "Adams",
+"department": "CSE"
 },
 "2": {
-"ID": "2",
-"Name": "Baker",
-"Department": "MECH"
+"id": "2",
+"name": "Baker",
+"department": "MECH"
 },
 "3": {
-"ID": "3",
-"Name": "Clark",
-"Department": "IT"
+"id": "3",
+"name": "Clark",
+"department": "IT"
 },
 "4": {
-"ID": "4",
-"Name": "Davis",
-"Department": "EEE"
+"id": "4",
+"name": "Davis",
+"department": "EEE"
 },
 "5": {
-"ID": "5",
-"Name": "Evans",
-"Department": "CSE"
+"id": "5",
+"name": "Evans",
+"department": "CSE"
 },
 "6": {
-"ID": "6",
-"Name": "Frank",
-"Department": "ECE"
+"id": "6",
+"name": "Frank",
+"department": "ECE"
 },
 "7": {
-"ID": "7",
-"Name": "Ghosh",
-"Department": "ECE"
+"id": "7",
+"name": "Ghosh",
+"department": "ECE"
 },
 "8": {
-"ID": "8",
-"Name": "Hills",
-"Department": "MECH"
+"id": "8",
+"name": "Hills",
+"department": "MECH"
 },
 "9": {
-"ID": "9",
-"Name": "Irwin",
-"Department": "IT"
+"id": "9",
+"name": "Irwin",
+"department": "IT"
 },
 "10": {
-"ID": "10",
-"Name": "Jones",
-"Department": "CSE"
+"id": "10",
+"name": "Jones",
+"department": "CSE"
 }
 }
