@@ -40,16 +40,22 @@ insights:
     get request using cURL (with and without header information)
     get request information - copy to file, download
     
+30 oct
+-------
+topic: Fastapi -File, UploadFile
+insights: get the file uploaded into post request
+source: https://fastapi.tiangolo.com/tutorial/request-files/
 
+source: https://thepythonguru.com/python-how-to-read-and-write-files/#:~:text=Reading%20files%20using%20read()%2C%20readline()%20and%20readlines()&text=Reads%20and%20returns%20all%20the,an%20empty%20list%20(%20%5B%5D%20).
+insights: file read in python
 
-steps in assignment:
--------------------
-csv to json -- okay
-connect to mongodb --okay
-GET data from mongodb --okay
-
-PUT data to mongodb 
-    - deal with _id --okay
-    - when called, add data
-format json object - to insert into db --okay
-
+source: 
+ * https://www.geeksforgeeks.org/writing-csv-files-in-python/
+ * https://stackoverflow.com/questions/51089194/python-convert-bytes-unicode-tab-delimited-data-to-csv-file
+insights:
+ * get file from upload
+ * read and store as byte file
+ * decode it into with separate lines
+ * write to csv file
+ * read csv file one by one to a document
+ * add docs to mongodb

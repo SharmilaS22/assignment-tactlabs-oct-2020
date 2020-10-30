@@ -1,0 +1,29 @@
+steps in assignment:
+-------------------
+csv to json -- okay
+connect to mongodb --okay
+GET data from mongodb --okay
+
+POST data to mongodb 
+    - deal with _id --okay
+    - when called, add data
+format json object - to insert into db --okay
+
+
+inside POST request ===
+    file upload manage
+    get data from file
+    add it to database 
+
+
+
+images
+dockerfile
+how to create a docker file
+what is dockerhub
+orchestrator
+docker swarm , dockercompose
+create a docker compose
+
+wednesday 9.00 am
+
